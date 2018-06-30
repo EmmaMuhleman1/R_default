@@ -1,0 +1,584 @@
+---
+title: "Homework 1"
+author: "Keyser Soze"
+date: "`r date()`"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+options(digits=4)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+###Homework policy: This homework is due by 5pm (EST) on the due date.  Homework is to be handed in via the course website in pdf format. Although we prefer you use Rmarkdown or Word, you do not need to type the homework; there are many ways (scanner in the library or phone apps) to convert written homework into a pdf file. Ask the teaching staff if you need assistance.
+
+###Late homework will not be accepted.  You are encouraged to discuss homework problems with other students (and with the instructor and TFs, of course), but you must write your final answer in your own words.  Solutions prepared in committee or by copying someone elses paper are not acceptable. 
+
+###Please keep your computer output to a minimum and focus on the required answer. The easiest way to put your computer output into your homework is to cut and paste it into a Word file and use the font courier new.
+\newpage
+
+
+#### Problem 1
+For the following surveys, discuss any problems you think exist and suggest how to fix the issues.
+
+**a)** A retail store manager wants to conduct a study regarding the shopping habits of his customers. He selects the first 60 customers who enter his store on a Saturday morning. 
+
+The manager is attempting to study the shopping habits of ALL of his customers. Selecting the first 60 customers who come to the store on a Saturday morning will likely lead to sampling bias or "selection bias." Suppose the manager is giving these sampled customers a survey to learn about their shopping habits. But, in his selection of each person to survey, a shopping habit is already (inherently) present: the time and day of the week they might go out to shop at his store (something the manager probably wants to know about). The sample of people who go shopping on a Saturday morning may tend to be biased towards those who work a normal, Monday to Friday 8-5pm workweek. It may exclude a good share of target customers, such as college students and people in their 20s and 30s who may go out on Friday evenings and sleep-in on Saturday morning. 
+
+Further suppose that the manager's survey asks these 60 customers about how frequently they shop online. If it is true that his sample is biased against the young (where the sample underweights the population of shoppers that are young / in college / early 20s), the analysis may result in an estimate of online shopping rates that is biased downward, as younger folks tend to be more tech savvy and thus may have higher incidence of online shopping relative to, say, the baby boomers or baby boomers' parents. 
+
+Potential Fix: Suppose this is an omni-channel retailer, and the sample size is to remain the same. In this case, the Manager should first look at the population of shoppers at his store, considering the pro rata share of sales made through the online channel versus at the store itself. He should further consider the "busier" shopping timeframes AND the times that are less busy and select customers from different days of the week and use different times (tailored approaches may be suitable, depending on the type of retail establishment, e.g. a smoke shop versus Macy's). The idea is that the selections should be made based on the patterns the store normally experiences for its shoppers. So if the manager sells both in-store and online and sometimes in the morning and sometimes later in the evening, the sampling strategy should reflective that distribution as well as the distribution of online customer transactions (that is, the distribution of the actual population he seeks to make inference upon). 
+
+POTENTIAL COUNTERARGUMENT, and MY RESPONSE: Sure, you could suppose this is the manager of a retail shop selling ultra, ultra high-end luxury suits to the uber rich inhabitants of Manhattan's upper East side. Due to the store's exclusivity, it is open only Saturdays from 9am to noon. In this case, the manager's sampling methodology would be LESS FLAWED, but STILL VERY-MUCH FLAWED NONETHELESS. 
+
+Even if this appears more suitable, selecting the first 60 and then ignoring the remaining customers (i.e. customers 61, 62, 63, + ..., + customer n) ignores a representative part of the data, creating a biased sample that favors the responses of those who tend to wake earlier, live close-by, or simply those who prefer shopping for expensive suits fresh in the mornings. Any inference made from such data could be misleading (and possibly significantly misleading, causing detrimental decision-making that hurts the store's ultimate sales and profitability.)
+
+**b)** The village of Oak Lawn wishes to conduct a study regarding the income level of households within the village. The village manager selects 10 homes in the southwest corner of the village and sends an interviewer to the homes to determine household income. 
+
+Suppose Oak Lawn village is the new name for the state of California. The "south" falls in San Diego, and "West" lands you in the region very close to the beach, perhaps Del Mar. If you surveyed 10 homes in Del Mar regarding their average income and used this to evaluate the average income of everyone in California, you are likely to overestimate the population average (the city's name does mean "the beach" in Spanish, after all). People living in Del Mar are likely to have higher average annual incomes than those living in San Ysidro, for instance (right near the Mexican border).
+
+A way to fix this would be to remove the geographic selection bias within Oak Lawn, selecting homes from the SW, NW, East, etc at 'random.'
+
+**c)** An antigun advocate wants to estimate the percentage of people who favor stricter gun laws. He conducts a nationwide survey of 1,203 randomly selected adults 18 years old and older. The interviewer asks the respondents, "Do you favor harsher penalties for individuals who sell guns illegally?""
+
+This survey has several problems, but I'll spare you the details and go with the obvious: "framing" or "wording-deliberate" bias. The scenario describes the study being carried out by an antigun advocate. Thus, this individual wants to get results that suggest the population at large also "antigun." So he designs the question to ask about whether harsher penalties should be imposed on those who "sell guns illegally?" People engaged in ILLEGAL businesses generally don't care what the existing law says about the legality of what they're doing, yet this "antigun" advocate intentionally includes the term "illegally" in the question to elicit a natural negative bias from survey respondents.  
+
+****
+
+#### Problem 2
+Suppose you are back in high school and are the campaign manager for your friend who is running for senior class president. You would like to know what proportion of students would vote for her if the election was held today. The class is too big to ask everyone (314 students).  Comment on whether or not each of the following sampling procedures should be used. Explain why or why not.
+
+**a)**	Poll everyone in your friend's math class.
+
+No good. I was in AP math with a bunch of nerds. The selection would be severely biased, although perhaps it is precisely those nerds who show up to vote - then again, who knows how the school might carry out the vote (perhaps they get everyone's vote by taking each vote in class on a given morning). If the friend's math class from which I took my sample happened to be AP Physics, the results likely won't reflect the results that one could reasonably expect to get from the population at large.
+
+**b)** Assign every student in the senior class a number from 1 to 314. Then, use a random number generator to select 30 students to poll.
+
+Sounds like a sound approach. No fix required.
+
+**c)** Ask every student who is going through the lunch line in the cafeteria who they will vote for.
+
+While in my view this is better than choosing from a given math class, this also may have significant bias. Even though I was in AP Physics in high school, I was far too cool to be caught in the cafeteria lunch line (what an anomaly?!). While my high school may not be representative of high schools in general and my experience (usually having ditched by lunchtime) is almost certain to be different from the "average" student's experience, it is very  possible that students who spend their lunch break in line at the high school cafeteria are not representative of the total population of seniors who will be voting to decide who becomes "class president."
+
+****
+\newpage
+
+#### Problem 3
+In R, read in the results of a small survey done by visitors to a regional mall. This can be done as follows. We also show you below how to obtain some information about the data set.
+```{r}
+mydata=read.csv("http://people.fas.harvard.edu/~mparzen/stat100/smallsurvey.csv")
+# number of rows
+nrow(mydata)
+# number of columns
+ncol(mydata)
+# names of the variables
+names(mydata)
+# for example, mean of the income variable
+mean(mydata$income)
+```
+
+**a)** How many rows of data are in this data set? 
+```{r}
+df=mydata
+nrow(df)
+```
+There are 30 rows.
+
+**b)**	How variables are in this data set? (the ncol(mydata)command could be useful here).
+```{r}
+ncol(df)
+```
+There are 10 columns.
+
+**c)**	One way to examine categorical variables is with a pie chart.  Produce a pie chart of where people live (the residence variable) by using the pie command. Comment on the graph.
+```{r}
+residence <- table(df$residence)
+pie(residence)
+
+```
+Looking at the pie chart, it appears that the sample of people selected were roughly equally spread apart based on where they live, with roughly a third living in rural areas, another third in suburbia, and the rest in urban areas.
+
+**d)**	Another way to examine categorical variables is with a bar chart.  Produce a bar chart of political affiliation (the politicalparty variable) by using the barplot. Comment on the graph-why can't we use a histogram for this variable?
+```{r}
+p = table(df$politicalparty)
+barplot(p)
+```
+We cannot use a histogram for this variable because it is categorical (by nature) and we need a numeric data series to plot along the x-axis, whose frequencies would then be plotted along the y-axis. Political affiliation has no ordinality and is categorical in nature, thus a histogram makes no sense.
+
+EMMA REMEMBER WHEN YOU HAVE THIS KNITTED TO WORD TO REPLACE THE GRAPH ABOVE WITH YOUR OLD GRAPH, THE ONE WITH ALL OF THE LABELS !!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+**e)**	Find the average of the income variable.
+```{r}
+mean(df$income)
+```
+
+
+**f)**	We can subset data in different ways (see handout on class site for how to do this). Compare the average income and standard deviation of income for men and women.
+```{r}
+female = subset(df, gender == "F")
+mean(female$income)
+```
+```{r}
+male = subset(df, gender == "M")
+mean(male$income)
+```
+Based on the individuals included in this particular dataset, the "AVERAGE" income among males is measurably higher than that among females, at 53.4 for men and 37.4 for women.
+```{r}
+sd(female$income)
+sd(male$income)
+```
+As we would anticipate, the standard deviation of incomes in the male subset is expanded relative to the standard deviation among women; this may be a natural consequence of the fact that the male subset has a higher mean (the average is higher among males, in absolute value terms, and thus slightly larger differences (as measured by standard deviation) are relatively smaller than they look based upon standard deviation metric alone).
+
+**g)** The variable jobhappy measures on a 1-10 scale how happy someone is with their job. Compare the average income for someone with a jobhappy rating of 8 or more versus the average income of someone with a jobhappy rating of 3 or less. What do you find?
+```{r}
+mean(subset(df$income, df$jobhappy>=8)) # income jobhappy
+mean(subset(df$income, df$jobhappy<=3)) # income unhappy
+```
+Based on this dataset and average income figures, people with lower paying jobs tend to report a higher rating for job happiness : the average income of those who reported job happiness level of 8 or higher is 37.25, which is fairly low relative relative to the average income of the group with reported jobhappiness levels below 4 (51.42). 
+
+****
+\newpage
+
+#### Problem 4
+This question uses an old data set on cars from Consumer Reports.  To load the data into R enter the following command 
+```{r}
+mydata=read.csv("http://people.fas.harvard.edu/~mparzen/stat100/cars10.csv")
+#Always good to know the variable names
+names(mydata)
+#Calculate some means and medians
+mean(mydata$price)
+median(mydata$price)
+```
+
+**a)** Calculate the mean price of the automobiles in the data set. 
+```{r}
+df=mydata
+mean(df$price)
+```
+The mean is 6165.
+
+**b)** Calculate the median price of the automobiles in the data set.
+```{r}
+median(df$price)
+```
+The median price is 5006.
+
+**c)**	What does the difference between the mean and median price indicate about the shape of the distribution for the price?
+
+The distribution is skewed to the right (positive skew) or contains large positive outliers, dragging the mean upward relative to the median (i.e. the 50th percentile).
+
+**d)** Calculate the mean price of automobiles separately for the domestic and foreign cars and compare the results. Note that \texttt{foreign} is coded "Foreign" for foreign cars and "Domestic" for domestic cars.
+```{r}
+mean(subset(df$price, df$foreign == "Foreign"))
+mean(subset(df$price, df$foreign == "Domestic"))
+```
+Based solely on the "average" price of vehicles in this sample, foreign-made cars appear to be slightly more expensive than their domestic counterparts (with a mean of 6385 vs. 6072 on domestically-made vehicles).
+
+**e)** Make a histogram of the price of cars. What shape does the histogram take? (Is it symmetric? Skewed?) 
+```{r}
+hist(df$price)
+```
+The histogram is positively skewed (with some very large outliers relative to the majority of the prices, dragging the mean upward). 
+
+**f)**	Discuss the difference in distributions of mpg for foreign and domestic cars. [do this by comparing means, medians and histograms).
+```{r}
+mean(subset(df$mpg, df$foreign == "Foreign"))
+mean(subset(df$mpg, df$foreign == "Domestic"))
+sd(subset(df$mpg, df$foreign == "Foreign"))
+sd(subset(df$mpg, df$foreign == "Domestic"))
+```
+The average mpg, based on this dataset, for foreign-made vehicles is meaningfully above that of domestic cars at nearly 25mpg vs. roughly 20mpg for domestic vehicles. The standard deviation among mpg's for foreign vehicles is, likewise, higher than that of domestic vehicles.
+
+```{r}
+foreign = subset(df$mpg, df$foreign == "Foreign")
+hist(foreign)
+```
+```{r}
+domestic = subset(df$mpg, df$foreign == "Domestic")
+hist(domestic)
+```
+The histogram reveals that the distribution of mpg for foreign-made cars within this dataset is slightly positively skewed, pulled to the right a tad due to an outlier in the 40-45mpg bin.
+
+**g)**	 Make a scatter plot of the variables weight and length. Does there appear to be any association between the variables? 
+```{r}
+plot(df$length, df$weight)
+```
+Yes, the two variables appear to have a positive correlation that looks almost/roughly linear when the length of the vehicles are within the band shown above (or, said differently, when the width of the variables are within the interval plotted above).
+\newpage
+#### Problem 5
+(thought exercise) Unfortunately, a friend of yours has been diagnosed with cancer. You obtain a histogram of the survival time (in months) of patients diagnosed with this form of cancer as shown in the figure below. The median survival time for individuals with this form of cancer is 11 months, while the mean survival time is 69 months. What words of encouragement should you share with your friend from a statistical point of view? [It is also recommended you read the essay "the median isn't the message" found on the course web site.]
+
+\begin{center}
+\includegraphics{survival_time}
+\end{center}
+
+From a statistical perspective, I could tell my friend the following (which is not all that encouraging, in my view, but it is what it is):
+
+"Typically, people diagnosed with this cancer fall into one of two groups insofar as it relates to the length they survive post-diagnosis. Almost half of the patients live at least 80 months longer (that's over 6 more years!). Better yet, on average, patients diagnosed with the cancer live another 69 months, so if you're like the average, you will perhaps have almost another 6 great years to think about your coming demise."
+
+
+#### Problem 6
+(thought exericse) When my friend Seth transferred from Harvard to Yale, many of his friends remarked that the average student IQ increased at both places. Is this possible and if so, how? Briefly explain.
+
+Yes, this is possible. Suppose Seth has the lowest IQ among all Harvard students, whose average IQ is 140 (compared to poor Seth, with an IQ of 100). When he leaves Harvard, that low 100 IQ is taken out of the Harvard dataset and stops pulling down the Harvard average. Further suppose the average IQ of students at Yale is 80 (ha ha). When Seth leaves Harvard and joins Yale, his 100 IQ exerts upward pressure on the average Yale IQ (by adding one new observation of 100 relative to the prior group average of only 80).
+
+#### Problem 7
+
+(thought exercise) Suppose the diameters of a sample of new tires coming off one production line turned out to have a standard deviation of 0. Would the manufacturer be happy or unhappy, assuming the average diameter was correct? Explain.  
+
+Asssuming the production line in question   is the only production line managed by the manufacturer (or at least that it is the only production line that determines whether the manufacturer is "happy" or not), if the average diameter was correct and the distribution was perfecthad a standard deviation of zero, then yes, the manufacturer should be very happy. Why? Because all tires came out perfectly as designed with zero error in the   length of the tires' diameters.
+
+\newpage 
+#### Problem 8
+Use this data set for the following question {10,20,30,40,50}. Feel free to use R for this problem. You can define this data set in R with the command 
+```{r}
+x=c(10,20,30,40,50)
+```
+
+**a)** Find the standard deviation and mean.
+```{r}
+mean(x)
+sd(x)
+```
+
+**b)**	Add 5 to each value, and then find the standard deviation and mean.
+```{r}
+add_five = x + 5
+mean(add_five)
+sd(add_five)
+```
+
+**c)**	Subtract 5 from each value and find the standard deviation and mean. 
+```{r}
+sub_five = x - 5
+mean(sub_five)
+sd(sub_five)
+```
+
+
+**d)**	Multiply each value by 5 and find the standard deviation and mean.
+```{r}
+x_expand = x * 5
+mean(x_expand)
+sd(x_expand)
+```
+
+**e)** Divide each value by 5 and find the standard deviation and mean.
+```{r}
+scrunched_x = x / 5
+mean(scrunched_x)
+sd(scrunched_x)
+```
+
+
+**f)**	Generalize the results of parts b through e.
+
+When you add and/or subtract a scalar from every element in a vector, this only affects the mean by moving the dataset along the number line (to the right in the case of addition, to the left in the case of subtraction); it does not, however, change the distribution or spread among the values in the vector and thus does not have any impact on the standard deviation.
+
+Conversely, multiplication and division transform the vector such that its dispersion grows (in the case of multiplication, leading to a higher standard deviation) or contracts (in the case of division).
+
+
+
+#### Problem 9
+A company has 30 employees, including a director. The lowest salary among the 30 employees is \$22,000. The director's salary is \$180,000, which is more than twice as much as anyone else's salary. Decide for each of the following statements about the 30 salaries whether it is true, false, or you cannot tell on the basis of the information at hand. You do not have to give an explanation.
+
+**a)** The average salary is below \$60,000. 	
+
+Insufficient information
+
+**b)**	The median salary is below \$60,000. 
+
+Insufficient information
+
+**c)** If all salaries are increased by \$1,000, that adds \$1,000 to the average.
+
+True
+
+**d)**	If the director's salary is doubled, and all other salaries remain the same, that increases the average salary.
+
+True
+
+**e)**	If the director's salary is doubled, and all other salaries  remain the same, that increases the median salary.
+
+False
+
+**f)** The standard deviation of the salaries is larger  than \$180,000. 	
+
+False
+
+#### Problem 10
+A mutual fund has a mean rate of return of about 12.3%, with a standard deviation of 15.7%.
+
+**a)**	 According to Chebyshev's Inequality, at least 75% of returns will be between what values? 
+
+Chebyshev's Inequality says that the maximum percentage that can fall outside of two standard deviations from the mean is 25%. In other words, 75% of the data must fall within two standard deviations of the mean. Thus, in this case, 75% of the returns must be within the following range:
+
+Lower bound: Mean - 2*StDev -> 12.3% - 2(15.7%) = 12.3% - 31.4%= -19.1%
+
+Upper bound: Mean + 2*StDev -> 12.3% + 2(15.7%) = 12.3% + 31.4%= 43.7%
+
+Thus, according to Chebyshev's Inequality, 75% of fund returns fall within the following range:
+
+-19.1% - 43.7%
+
+**b)**	According to Chebyshev's Inequality, at least 88.9% of returns will be between what two values? 
+
+Lower bound: Mean - 3*StDev -> 12.3% - 3(15.7%) = 12.3% - 41.7%= -29.4%
+
+Upper bound: Mean + 3*StDev -> 12.3% + 3(15.7%) = 12.3% + 41.7%= 54%
+
+Thus, according to Chebyshev's Inequality, 88.9% of the values will fall in the following range:
+
+-29.4% - 54%
+
+**c)**	Should an investor be surprised if she has a negative rate of return? Why?
+
+No, an investor should actually almost expect, if he/she invests in the fund for several years, to experience a negative return given the standard deviation of the fund's returns is greater than its average return, thus if the manager returns only 1 standard deviation below his average in a given year, the return would be negative (12.3% - 15.7%).
+
+**d)** If we were going to use the Empirical Rule, what would we need to assume about the returns?
+
+That the distribution of the population of returns is "MOUND-SHAPED."
+
+
+#### Problem 11
+Suppose $x_1=2$,$x_2=-1$ and $x_3=0$. Find $2+\sum_{i=1}^{3}5x_i$.
+
+Doing the math in my head, I believe the answer is 7. We start with the summation, which goes as follows:
+
+Starting with  the summation piece (prior to adding 2): 
+	- we get 5*x1, or 5*2 = 10, plus 5*x2, or 5*-1=-5, so    - now we're at 5, and then 5*x3=0 since x3=0, so the       total here is 5
+  -	then, we add 2
+Answer = 7
+
+\newpage
+
+####Problem 12
+We have data on the amount of the dinner bill and the resulting tip from a local restaurant. Read the data in as follows:
+```{r}
+df=read.csv("http://people.fas.harvard.edu/~mparzen/stat104/RestaruantTips.csv") # changed 'mydata' to 'df' FYI 
+names(df)
+```
+Lets first build a variable that has the tip percentage:
+
+```{r}
+summary(df$PctTip)
+```
+
+The median tip is a bit above 16% and more than 25% of the people tip more than 14%. Someone tipped an amazing 42%. [my bad-I just realized there is a variable in this data set called PctTip which is the same thing I just defined. Oh well.]
+
+How many people tipped above 40%? Looks like two people:
+```{r}
+sum(df$PctTip>40)
+```
+
+Suppose we want to remove these big tippers from our data set. One way to do so is to make a new data set with these 2 points removed:
+```{r}
+dim(df) # personal preference, I use df for standard var name 
+df1=subset(df,df$PctTip<40) # and df1 to signify an update to original df...
+dim(df1) # as you can see this has removed the 2 outliers, bring dimensions down to 155, 7 (from 157,7)
+
+summary(df1) 
+```
+
+The code above shows we started with 157 rows of data, and when we delete the two largest tippers our new data set has 155 rows of data. Note that we have to create a new variable for tip percentage for the new data set, and this new variable has a max less than 40.
+
+**a)** Using the box plot rule, how many Tip values are considered outliers (use the original data set).
+
+```{r}
+summary(df$Tip) # to pull the summary stats for the feature "Tip" from the ORIGINAL DATASET ("df")
+outliers_high = sum(df$Tip>9.35)
+outliers_high # There are 9 tips in the dataset above 9.35,
+```
+
+The box plot rule defines an outlier as anything outside of Q1 - 1.5 x IQR (Interquartile range) or Q3 + 1.5 x IQR. The code snippet above presents first the summary statistics with Q1, Q3 (and thus the IQR) for the Tip values of the original dataset ("df"). Note that because the 1st quartile value of Tips is relatively low, when compared to the dispersion and used to identify outliers on the low-end, we get a NEGATIVE number, meaning a tip would have to be lower than this negative value in order to be deemed an outlier. As a result, we have no outliers on the low-end. According to the boxplot rule, any Tips exceeding 9.35 (i.e. Q3 plus 1.5 x IQR) should be considered outliers. Thus, as depicted in the code results above [1], we have 9 outliers to the upside.
+
+NOTES ON CALCULATION OF ANSWER:
+Q1 for the tip values in the original dataset is 2.10, while Q3 is 5.00. Hence, IQR = 5 - 2.1, or 2.9. If the IQR is 2.9, the boxplot rule defines an outlier on the low end is anything below: 2.1(Q1) - 1.5(2.9) = -2.25 (because there's NO SUCH THING AS A NEGATIVE TIP, the boxplot rule doesn't necessarily work well with this dataset). Based on the boxplot rule, due to the fact that the first quartile in this dataset is not far from zero and the standard deviation is RELATIVELY LARGE (WHEN COMPARED TO THE VALUE AT Q1, or the 25th percentile), there are NO OUTLIERS on the LOW END in this case.
+
+Outliers on the high-end (using boxplot rule): 5 + 1.5(2.9) = 9.35 -> any tip amounts above 9.35 from the original dataset are large positive outliers.
+
+**b)** Using the box plot rule, how many tiper (tip percentage) values are considered outliers (use the original data set).
+```{r}
+summary(df$PctTip) # gives us the values for Q1, Q3, from which we can compute the IQR
+```
+```{r}
+LIF = 14.3 - IQR(df$PctTip) * 1.5 # calculates threshold for outliers on the low-end per boxplot rule
+LIF
+UIF = 18.2 + IQR(df$PctTip) * 1.5 # calculates threshold for outliers on the high-end per boxplot rule
+UIF
+```
+As shown in the code results above, the threshold for consideration as an outlier on the low-end per the boxplot rule (LIF) is 8.45, while the threshold on the high-end is 24.05 (UIF). Thus, in terms of percentage tips, we calculate outliers as follows:
+```{r}
+outliers_PctTip = sum(df$PctTip < 8.45) + sum(df$PctTip > 24.05)
+outliers_PctTip # there are 8 outliers
+```
+As shown in the code above, we have 8 outliers in the original dataset according to the boxplot rule based on the original dataset.
+
+**c)** Using the original data set, what is the correlation between dinner bill and tip?
+```{r}
+cor(df$Bill,df$Tip)
+```
+As one would expect, the correlation between the size of the dinner bill and the size of the tip per the original dataset is high and positive at 0.9151. See code snippet above.
+
+**d)** Using the data set with the two largest tip percentages removed, what is the correlation between dinner bill and tip? Is this number the same as from part (c)? Explain.
+
+First, I want to start by stating that when we remove the two largest tip percentages, we alter the relationship in the dataset between tip size relative to  bill size, as these two outliers are outliers relative to the rest of the observations as it relates to the relationship between size of the tips and the size of the overall bill (since tip percentage equals the tip divided by the total bill). 
+```{r}
+cor(df1$Bill,df1$Tip)
+```
+Using the new dataset with outliers removed (as per the code above, note that df1 is our dataset ex outliers), the correlation between tip size and bill size increases from 0.9151 to an even stronger positive correlation, at 0.9462.
+
+\newpage
+#### Problem 13
+This question moves us in the direction of understanding that just because two variables are uncorrelated does not mean they are independent.
+
+**a)**	Explain in words what a correlation of 0 implies.
+
+A correlation coefficient of zero implies the variables in question exhibit no LINEAR relationship.
+
+**b)**	Load the blas data set into R and find the correlation of  X and Y
+```{r}
+df3=read.csv("http://people.fas.harvard.edu/~mparzen/stat100/blas.csv") # renamed dataset df3, just a heads-up
+cor(df3$X, df3$Y)
+```
+Suggests NO LINEAR RELATIONSHIP (or a tiny one,  if any) between X and Y.
+
+**c)**	Plot the data-does it agree with your definition?
+```{r}
+plot(df3$X, df3$Y) # quadratic
+```
+Yes, it confirms that the relationship between X and Y is NOT LINEAR: the relationship between X and Y is quadratic. To be specific, the relationship between X and Y is non-constant and depends on the value of X.
+
+When X is positive, the correlation betweeen X and Y is positive. When X is negative, the correlation between X and Y is negative (that is, as X moves further into negative territory along the horizontal axis, Y moves upward along the vertical axis; numerically-speaking, when X is negative, if it is small and close to zero, Y would too be small and close to zero  but would be positive; as X becomes increasingly negative approaching -1, Y becomes increasingly positive approaching 1).
+
+#### Problem 14
+Fill in the blanks using the definition of covariance and correlation
+
+ ```{r, out.width = "400px",echo=FALSE}
+ knitr::include_graphics("fillinblanks.png")
+ ```
+
+**a)** Blank1 equals 0.4244646
+
+**b)** Blank2 equals 
+```{r}
+Correlation_x1_x2 <- 0.3096174
+Covariance_x1_x2 <- 4017.557201
+StDev_x2 = 4.40
+StDev_x1 = Covariance_x1_x2/(StDev_x2 * Correlation_x1_x2)
+Variance_x1 = StDev_x1 * StDev_x1 
+# Blank 2 fills the spot in the covariance matrix where x1 and x1 meet (= variance of x1)
+Variance_x1
+```
+Since we know that the correlation between any two variables x1 and x2 equals: 
+
+           correlation(x1,x2) = covariance(x1,x2) / StDev(x1)*StDev(x2)
+
+If we have the Covariance and the standard deviation of x2, we can find the variance of x1 by first deriving the standard deviation of x1 ("StDev(x1)"):
+
+              StDev(x1) = Cov(x1,x2) / (StDev(x2)*Correlation(x1,x2))
+
+In a covariance matrix, along the diagonals, where each variable meets itself, we get the VARIANCE of that variable. Blank 2 asks us for the figure in the covariance matrix where x1 meets itself, thus we are looking for the variance of x1. The variance of any variable is simply the standard deviation squared. Accordingly, we use our knowledge of these relationships to back into the Standard Deviation of x1, then we square it to get the Variance of x1 (and that's our answer):
+```{r}
+StDev_x1 = 4017.557201 / (4.40 * 0.3096174)
+StDev_x1
+Blank_2 = StDev_x1*StDev_x1
+Blank_2 # Answer is 8,696,672 (= variance of x1, or what should be in Blank 2)
+```
+
+
+\newpage
+
+#### Problem 15
+
+We have data on frozen pizza sales (in pounds) and average price ($/unit) from Dallas Texas for 39 recent weeks. Load the class survey data into R using the command
+```{r}
+df5=read.csv("http://people.fas.harvard.edu/~mparzen/stat100/pizzasales1.csv") # changed name to df5
+```
+
+**a)**	Using price as the explanatory variable and sales as the response variable, run a regression and write down the linear equation relating sales to price from the output.
+```{r}
+names(df5)
+```
+```{r warning=FALSE, paged.print=TRUE}
+attach(df5)
+lm(df5$sales~df5$price)
+```
+```{r}
+plot(df5$price, df5$sales)
+abline(lm(df5$sales ~ df5$price))
+```
+
+The Linear Equation (based on the above regression output): 
+
+               Sales = 141,866 - 24,369*(Price)
+               
+**b)**	What does the slope mean in this context?
+
+The slope means that, when our pizzas are priced roughly in the 3 to 4.20 range, generally speaking the lower the price of the pizza, the greater the total sales. Likewise in the other direction (vice versa)
+
+**c)**	What does the y-intercept mean in this context? Is it meaningful?
+
+The y-intercept is not meaningful by itself, as sales would be ZERO if the price is ZERO and vice versa. Also note from the plot above, we do not model the total sales against a price of zero, we stop at around 3 or so. Thus, the y-intercept (i.e. the value of y, given x equals 0) is not modeled in the interval above.
+
+**d)**	 What do you predict the sales to be if the average price charged was $3.50 for a pizza?
+
+```{r}
+price = 3.50
+sales = 141866 - 24369 * price
+sales # expected sales when price is $3.50
+```
+Expected sales with a price of $3.50 would be roughly $56,575
+
+**e)**	If the sales for a price of $3.50 turned out to be 60,000 pounds, what would the residual be?
+```{r}
+residual = 60000-56575
+residual
+```
+
+The residual would be 3,425
+
+#### Problem 16
+The owner of a moving company typically has his most experienced manager predict the total number of labor hours that will be required to complete an upcoming move. This approach has proved useful in the past, but the owner has the business objective of developing a more accurate method of predicting labor hours (Y). In a preliminary effort to provide a more accurate method, the owner has decided to use the number of cubic feet moved as the independent variable (X) and has collected data for 36 moves in which the origin and destination were within the borough of Manhattan in New York City and in which the travel time was an insignificant portion of the hours worked. The data may be loaded into R as follows
+  
+```{r}
+df6=read.csv("http://people.fas.harvard.edu/~mparzen/stat100/moving.csv") # renamed to df6
+```
+
+Use R to answer the questions below.
+
+**a)** Create a scatter diagram of the data.
+```{r}
+plot(df6$feet, df6$hours)
+```
+
+ 
+**b)**  a least squares regression line to this data and interpret the slope.
+```{r}
+lm(df6$hours~df6$feet)
+```
+```{r}
+plot(df6$feet, df6$hours)
+abline(lm(df6$hours~df6$feet))
+```
+
+
+**c)** Predict the labor hours for a 500 cubic feet move using the estimated regression equation developed in part (b).
+```{r}
+labor_hours = -2.3697 + (.0501 * 500) # linear regression line
+labor_hours #display preidction (= 22.68 labor hours)
+```
+Linear regression model predicts 22.68 labor hours for a 500 cubic feet move
+
+
+
+
+
+
+
